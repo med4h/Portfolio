@@ -32,7 +32,7 @@ export const StarBackground = () => {
 
 
     const generateMeteors = () => {
-        const numberOfMeteors = 5
+        const numberOfMeteors = 6
 
         const newMeteors = []
 
@@ -41,7 +41,7 @@ export const StarBackground = () => {
                 id: i,
                 size: Math.random() * 1 + 1,
                 x: Math.random() * 100,
-                y: Math.random() * 30,
+                y: Math.random() * 40,
                 delay: Math.random() * 30,
                 animationDuration: Math.random() * 3 + 3,
             });
@@ -70,7 +70,7 @@ return <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
                 key={meteor.id}
                 className="meteor animate-meteor"
                 style={{
-                    width: meteor.size * 25 + "px",
+                    width: meteor.size * 10 + "px",
                     height: meteor.size + "px",
                     left: meteor.x + "%",
                     top: meteor.y + "%",
