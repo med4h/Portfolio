@@ -6,6 +6,14 @@ export const StarBackground = () => {
     
     useEffect(() => {
         generateStars();
+
+        const handleResize = () => {
+            generateStars();
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener("resize", handleResize);
     }, [])
 
     const generateStars = () => {
