@@ -1,6 +1,9 @@
+import {ArrowDown} from "lucide-react";
+
 export const HeroSection = () => {
     const animatedText = "Adrian Meda Sanchez"; // Text to animate
     const staticText = "Hi, I'm"; // Static text
+    
 
     return (
         <section
@@ -32,7 +35,27 @@ export const HeroSection = () => {
                             ))}
                         </span>
                     </h1>
+                    <p className="text-md md:text-md font-semibold text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+                    Software Engineer Apprentice at Clover
+                    </p>
+
+                    <div className="opacity-0 animate-fade-in-delay-5 text-sm text-muted-foreground mb-5">
+                        <a
+                            href="#projects"
+                            className="cosmic-button button-glow px-6 py-2 "
+                            style={{
+                                "--random-hue": 0,
+                            }}
+                        >
+                            My Projects
+                        </a>
+                    </div>
                 </div>
+            </div>
+
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span></span>
+            <ArrowDown className="h-6 w-" />
             </div>
         </section>
     );

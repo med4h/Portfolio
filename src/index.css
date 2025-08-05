@@ -16,7 +16,9 @@
   --animate-fade-in-delay-1: fade-in 0.9s ease-out 0.2s forwards;
   --animate-fade-in-delay-2: fade-in 1s ease-out 0.2s forwards;
   --animate-fade-in-delay-3: fade-in 0.9s ease-out 0.6s forwards;
-  --animate-fade-in-delay-4: fade-in 1s ease-out 0.4s forwards;
+  --animate-fade-in-delay-4: fade-in 2s ease-out 1s forwards;
+  --animate-fade-in-delay-5: fade-in 1s ease-out 0.8s forwards;
+
   --animate-meteor: meteor 5s linear infinite;
 
   @keyframes float {
@@ -183,6 +185,39 @@
         opacity: 1; /* Fully visible */
     }
   }
+  @keyframes button-glow-effect {
+    0% {
+        transform: scale(1); /* Default size */
+        box-shadow: none; /* No glow */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly expand */
+        box-shadow: 0 0 15px hsl(var(--random-hue), 100%, 75%), 
+                    0 0 30px hsl(var(--random-hue), 100%, 75%); /* Glow effect */
+    }
+    100% {
+        transform: scale(1); 
+        box-shadow: none; 
+    }
+  }
+  @keyframes button-fade-glow {
+    0% {
+        transform: scale(1); 
+        box-shadow: none; 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1.05); 
+        box-shadow: 0 0 8px hsl(var(--random-hue), 100%, 75%), 
+                    0 0 16px hsl(var(--random-hue), 100%, 75%); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1); 
+        box-shadow: none; 
+        opacity: 1; 
+    }
+  }
 }
 
 @layer base {
@@ -260,11 +295,9 @@
   background-clip: padding-box;
   border: 1px solid transparent;
 }
-
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
-         hover:scale-105 active:scale-95;
+  @apply px-6 py-2 rounded-full bg-[hsl(0,100%,75%)] text-white font-medium 
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(255,0,0,0.5)] active:scale-95;
 }
 
 @utility star {
@@ -311,4 +344,10 @@
 .animate-fade-in-delay-4 {
     animation: fade-in 1s ease-out 0.4s forwards; /* 0.4s delay */
     opacity: 0; /* Ensure it's hidden before animation starts */
+}
+
+.button-glow {
+    display: inline-block;
+    animation: button-fade-glow 3s infinite ease-in-out; /* Smooth looping animation */
+    --random-hue: calc(var(--random-hue)); /* Use the dynamically set hue */
 }
