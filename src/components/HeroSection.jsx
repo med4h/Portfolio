@@ -13,7 +13,7 @@ export const HeroSection = () => {
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
                     <h1
-                        className="text-4xl md:text-6xl font-bold tracking-tight"
+                        className="text-4xl sm:text-2xl md:text-6xl font-bold tracking-tight"
                         style={{
                             "--total-letters": animatedText.length, // Pass total letters as a CSS variable
                         }}
