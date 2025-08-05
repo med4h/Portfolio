@@ -19,9 +19,6 @@ export const AboutSection = () => {
                         My journey from a cook to a car dealership professional, and now into software development, 
                         has equipped me with a unique and valuable skill set.
                         </p>
-                        <p className="text-muted-foreground">
-                            About me paragraph here
-                        </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a
