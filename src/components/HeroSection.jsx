@@ -1,4 +1,4 @@
-import {ArrowDown} from "lucide-react";
+import {ArrowDown, Bot, Briefcase} from "lucide-react";
 
 export const HeroSection = () => {
     const animatedText = "Adrian Meda Sanchez"; // Text to animate
@@ -7,7 +7,7 @@ export const HeroSection = () => {
 
     return (
         <section
-            id="#hero"
+            id="hero"
             className="relative min-h-screen flex flex-col items-center justify-center px-4"
         >
             <div className="container max-w-4xl mx-auto text-center z-10">
@@ -47,14 +47,14 @@ export const HeroSection = () => {
                                 "--random-hue": 0,
                             }}
                         >
-                            My Projects
+                            <Bot/>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <span></span>
+            <span>Check me out!</span>
             <ArrowDown className="h-6 w-" />
             </div>
         </section>
