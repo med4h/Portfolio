@@ -6,21 +6,21 @@ const projects = [
         title: "Inventory App",
         description: "Full Stack Inventory Web App Group Project",
         image: "/projects/Project1.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/MV-SWE-Fiserv-US/group-full-stack-inventory-project-debugsquad",
     },
     {
         id: 2,
         title: "ADB UI/Tool",
         description: "ADB UI and Command Executor Pair Project",
         image: "/projects/Project2.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/calvinlazzz/op-adb",
     },
     {
         id: 3,
         title: "Pokedex",
         description: "Pokemon API Project",
         image: "/projects/Project3.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/med4h/pokemon-game",
     },
 ]
 
@@ -59,6 +59,8 @@ export const ProjectsSection = () => {
                             <div className="flex space-x-3">
                                 <a
                                     href={project.githubUrl}
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
                                     className="cosmic-button button-glow project-button px-4 py-1"
                                     style={{
                                         "--random-hue": 0,

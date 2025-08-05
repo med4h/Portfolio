@@ -41,7 +41,7 @@ export const HeroSection = () => {
 
                     <div className="opacity-0 animate-fade-in-delay-5 text-sm text-muted-foreground mb-5">
                         <a
-                            href="#projects"
+                            href="#about"
                             className="cosmic-button button-glow px-6 py-2 "
                             style={{
                                 "--random-hue": 0,
